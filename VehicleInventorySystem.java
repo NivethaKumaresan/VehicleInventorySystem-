@@ -1,10 +1,5 @@
 import java.util.*;
 public class VehicleInventorySystem {
-    //import java.util.*;
-
-
-
-    // User POJO class
     static class User {
         private String firstName;
         private String lastName;
@@ -31,7 +26,7 @@ public class VehicleInventorySystem {
         }
     }
 
-    // Vehicle POJO class
+    
     static class Vehicle {
         private String model;
         private int manufacturingYear;
@@ -56,21 +51,21 @@ public class VehicleInventorySystem {
         }
     }
 
-    // IUser interface
+    
     interface IUser {
         void addUser(User user);
 
         User authenticateUser(String username, String password);
     }
 
-    // IVehicle interface
+
     interface IVehicle {
         void addVehicle(Vehicle vehicle);
 
         List<Vehicle> getSortedVehicles(String sortBy);
     }
 
-    // UserImpl class implements IUser interface
+    
     static class UserImpl implements IUser {
         private List<User> users = new LinkedList<>();
 
@@ -86,11 +81,11 @@ public class VehicleInventorySystem {
                     return user;
                 }
             }
-            return null; // User not found
+            return null;
         }
     }
 
-    // VehicleImpl class implements IVehicle interface
+    
     static class VehicleImpl implements IVehicle {
         private List<Vehicle> vehicles = new LinkedList<>();
 
@@ -104,10 +99,10 @@ public class VehicleInventorySystem {
             List<Vehicle> vehicleList = new ArrayList<>(vehicles);
 
             if (sortBy.equalsIgnoreCase("mfgyear")) {
-                // Sort by manufacturing year
+                
                 Collections.sort(vehicleList, Comparator.comparingInt(Vehicle::getManufacturingYear));
             } else if (sortBy.equalsIgnoreCase("price")) {
-                // Sort by price
+                
                 Collections.sort(vehicleList, Comparator.comparingDouble(Vehicle::getPrice));
             }
 
@@ -118,17 +113,17 @@ public class VehicleInventorySystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Create instances of UserImpl and VehicleImpl
+        
         IUser userImpl = new UserImpl();
         IVehicle vehicleImpl = new VehicleImpl();
 
-        // Predefined vehicles
+        
         vehicleImpl.addVehicle(new Vehicle("Toyota", 2019, 5000));
         vehicleImpl.addVehicle(new Vehicle("Suzuki", 2016, 3500));
         vehicleImpl.addVehicle(new Vehicle("Benz", 2021, 6000));
         vehicleImpl.addVehicle(new Vehicle("Kia", 2020, 4500));
 
-        // User registration
+
         System.out.println("Welcome to AUTOSHOP WORLD!!!");
         System.out.println("Please signup with your details");
 
@@ -148,7 +143,7 @@ public class VehicleInventorySystem {
         userImpl.addUser(newUser);
         System.out.println("Thank you… your registration success!!!");
 
-        // User login
+        
         System.out.println("Please sign in with your details");
         System.out.print("Please enter your username: ");
         String loginUsername = scanner.nextLine();
@@ -161,14 +156,14 @@ public class VehicleInventorySystem {
         if (authenticatedUser != null) {
             System.out.println(authenticatedUser.getFirstName() + "!!!! Welcome to Autoshop world");
 
-            // Show available vehicles
+            
             System.out.println("\nList of Available Vehicles:");
             List<Vehicle> vehicles = vehicleImpl.getSortedVehicles("mfgyear");
             for (Vehicle v : vehicles) {
                 System.out.println(v.getModel() + " " + v.getManufacturingYear() + " " + v.getPrice());
             }
 
-            // Sorting option
+            
             System.out.print("\nPlease enter your input to sort results (Ex: mfgyear or price): ");
             String sortInput = scanner.nextLine();
 
