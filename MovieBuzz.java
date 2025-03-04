@@ -52,26 +52,26 @@ public class MovieBuzz
 
 
 
-// OUTPUT:
-// Enter Your Hero: movie
-// bala
-// balaya
-// chiru
+/*OUTPUT:
+Enter Your Hero: movie
+bala
+balaya
+chiru
 
-// Enter Your Hero: bala
-// bala 1
-// bala 2
-// bala 3
+Enter Your Hero: bala
+bala 1
+bala 2
+bala 3
 
-// Enter Your Hero: chiru
-// chiru 1
-// chiru 2
+Enter Your Hero: chiru
+chiru 1
+chiru 2
 
-// Enter Your Hero: balaya
-// bala 1
-// bala 2
-// bala 3
+Enter Your Hero: balaya
+bala 1
+bala 2
+bala 3
 
-// Enter Your Hero: exit
-// Exiting MovieBuzz.
+Enter Your Hero: exit
+Exiting MovieBuzz.*/
 
