@@ -179,5 +179,36 @@ public class VehicleInventorySystem {
     }
 }
 
-    
+/*OUTPUT:
+
+
+Welcome to AUTOSHOP WORLD!!!
+Please signup with your details
+Please enter your first name: Rahul
+Please enter your second name: Sharma
+Please enter your username: Rahuls
+Please enter your password: rahul123
+Thank you… your registration success!!!
+Please sign in with your details
+Please enter your username: Rahuls
+Please enter your password: rahul123
+Rahul!!!! Welcome to Autoshop world
+
+List of Available Vehicles:
+Suzuki 2016 3500
+Toyota 2019 5000
+Kia 2020 4500
+Benz 2021 6000
+
+Please enter your input to sort results (Ex: mfgyear or price): mfgyear
+Suzuki 2016 3500
+Toyota 2019 5000
+Kia 2020 4500
+Benz 2021 6000
+
+Please enter your input to sort results (Ex: mfgyear or price): price
+Suzuki 2016 3500
+Kia 2020 4500
+Toyota 2019 5000
+Benz 2021 6000*/
 
